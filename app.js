@@ -18,7 +18,7 @@ const toNumber = (intStr) => {
 
 if (argv.file) {
   log(chalk.blue(boxen("Converting CSV to JSON...", { padding: 1 })));
-  let filename = argv.file.substr(0, argv.file.length - 3);
+  let filename = argv.file.substr(0, argv.file.length - 4);
   let data = fs.readFileSync(`./input/${argv.file}`, "utf-8");
   let lines = data.split(/\r?\n/);
   let header = lines.shift();
